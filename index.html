@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<title>Test Blog Page</title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		
+		.container{
+			margin-left: 110px;
+			padding: 10px;
+			height: 2000px;
+			width: 1150px;
+						
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+		
+		#more {display: none;}
+
+		/* Create three equal columns that floats next to each other */
+		.column-topbar {
+		  float: left;
+		  width: 32%;
+		  height: 60px;
+		  border-bottom:1px solid grey;
+		  		  
+		  }
+		  
+		.column-navbar {
+		  float: left;
+		  width: 8.2%;
+		  height: 8px;
+		  text-align: center;		  
+		  		  
+		  }  
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		a:link{
+		text-decoration: none;
+		}
+		
+		.signup {
+			float: right;
+			border:1px solid grey;
+			border-radius:5px;
+			width:68px;
+			height:30px;
+			text-align: center;
+		}
+		
+		.featured {
+			margin-top: 5px;
+			width: 1100px;
+			height: 340px;
+			background-color: black;
+			border: 1px solid black;
+			border-radius: 5px;
+			opacity :0.7;
+			
+		}
+		
+		.featured-box {
+			margin: 50px;
+			margin-top: 10px;
+			width: 500px;
+			float: left;
+		}
+		
+		.featured-title {
+			margin: 0px;
+			font-size: 55px;
+			font-weight: strong;
+			color: white;
+		}
+		.featured-content {
+			margin-top: 15px;
+			color: white;
+			font-size: 15px;
+		}
+		
+		.column-content {
+		  float: left;
+		  width: 47%;
+		  height: 250px;
+		  border:1px solid grey;
+		  border-radius: 3px;
+		  
+		}
+		
+		img {
+			width: 100%;
+			height: 248px;
+			line-height: 250px;
+			text-align: center;
+			font-weight: strong;
+			color: white;
+		}
+		
+		.featured-second {
+			margin-left:0px; 
+			width: 60% 
+			float:left;
+		}
+
+		
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+			  <div class="column-topbar" >
+				<p><a href="" >Subscribe</a></p>
+			  </div>
+			 
+			 <div class="column-topbar" style="text-align:center;" >
+				<p style="margin: 0px; font-size: 40px;"><b>Large</b></p>
+			  </div>
+			 			  
+			  <div class="column-topbar">
+				
+				<p class="signup">Sign Up</p>
+
+			  </div>
+			
+			</div>
+			
+			<div class="row" style="margin:5px; ">
+
+			  <div class="column-navbar" >
+				<p style="text-align:left;">World</p>
+
+			  </div>
+			 
+			 <div class="column-navbar" >
+				<p style="text-align:left;">U.S.</p>				
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p style="text-align:left;">Technology</p>				
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p>Design</p>
+			  </div>
+			 
+			 <div class="column-navbar">
+				<p>Culture</p>				
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p>Bussiness</p>				
+
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p>Politics</p>
+			  </div>
+			 
+			 <div class="column-navbar">
+				<p>Opinions</p>				
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p>Science</p>				
+
+			  </div>
+			  
+			  <div class="column-navbar" >
+				<p>Health</p>
+			  </div>
+			 
+			 <div class="column-navbar">
+				<p>Style</p>				
+			  </div>
+			  
+			  <div class="column-navbar">
+				<p>Travel</p>				
+
+			  </div>
+			
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="featured" >
+					<div class="featured-box" >
+						<p class="featured-title">Title of a longer featured blog post</p>
+						
+						<div style="width: 610px;" >
+							<p class="featured-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis orci laoreet, auctor quam sit amet, interdum augue. 
+								Duis id mi est. Integer vitae quam congue, sodales mi vitae, molestie eros. Aenean molestie blandit laoreet. Praesent eu tincidunt dolor. 
+								Integer non nibh sodales quam convallis sagittis. Quisque ullamcorper dolor id orci consequat, nec luctus erat elementum. In hac habitasse platea dictumst.
+								Aenean auctor interdum quam, at consequat dolor.
+								<span id="dots">...</span>
+								<span id="more"> 
+								Pellentesque mollis augue ac purus bibendum, id pretium justo placerat. 
+								Quisque condimentum massa quis turpis faucibus, vitae bibendum velit commodo. Etiam tempor, urna vitae accumsan consectetur, tortor orci tincidunt libero, 
+								in tincidunt mauris elit quis ipsum. In hac habitasse platea dictumst. Ut risus ex, pellentesque et nisl vitae, lobortis imperdiet neque. Donec finibus aliquet ex sed vestibulum.
+								</span>
+							</p>
+						</div>
+						<p style="color: white;" onclick="myFunction()" id="myBtn"><b>Continue Reading...</b></p>
+					
+					</div>
+				</div>
+				
+			</div>
+			<br>
+			<br>
+			<div class="row">
+			    <div class="column-content">
+					<div style="margin-left:20px; width: 60% float:left;">	
+						<p><h3 style="color: blue;">World</h3></p>
+						<div id="featured-world" class="featured-second">
+						
+						</div>
+					</div>
+					<div class="thumbnail" style="margin-top: -59px; float:right; width: 35%; height: 248px; background-color:grey; border-radius: 2px;">	
+						
+						<img src="" height="248px" width="100%" alt="Thumbnail">
+					
+					</div>
+			    </div>
+				
+				<div class="column-content" style="margin-right:30px; float:right;">
+					<div style="margin-left:20px; width: 60% float:left;">	
+						<p><h3 style="color: green;">Design</h3></p>
+						<div id="featured-design" class="featured-second">
+						
+						</div>
+					</div>
+					<div class="thumbnail" style="margin-top: -59px; float:right; width: 35%; height: 248px; background-color:grey; border-radius: 2px;">	
+						
+						<img src="" height="248px" width="100%" alt="Thumbnail">
+					
+					</div>
+				</div>
+			
+			</div>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			/*function myFunction() {
+			  var dots = document.getElementById("dots");
+			  var moreText = document.getElementById("more");
+			  var btnText = document.getElementById("myBtn");
+	
+
+			  if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "<b>Continue Reading...</b>"; 
+				moreText.style.display = "none";
+			  } else {
+				dots.style.display = "none";
+				btnText.innerHTML = "<b>Read less</b>"; 
+				moreText.style.display = "inline";
+			  }
+			}*/
+		
+		</script>
+	</body>
+
+</html>
