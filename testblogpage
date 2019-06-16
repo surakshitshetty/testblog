@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+	<title>Test Blog Page</title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-usability: yes," />
+		<style>
+		
+			
+			
+		/*	
+			html, body, {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+			}
+		*/	
+			.container {
+				margin: 5px;
+				min-width: 400px;
+				padding: 50px;
+				height: auto;
+				width: 100%;
+				min-width: 400px;
+				
+			}
+				
+			.container-main {
+				margin: 10px;
+				padding: 4.5%;
+				height: auto;
+				width: 100%;
+				min-width: 400px;
+				object-fit: contain;
+			}
+		
+			.header {
+				padding: 50px;
+				width: 100%;
+				//min-width: 400px;
+				margin: 0px;
+				float: left;
+			} 
+		
+			.body {
+				width: 60%;
+				height: auto;
+				min-width: 400px;
+				float: left;
+				
+			}
+				
+			.sidebar {
+				width: 40%;
+				min-width: 400px;
+				float: left;
+			}
+		
+		
+			.footer{
+				background-color: #f9f9f9;
+				margin: 0px;
+				width: 100%;
+				min-width: 400px;
+				height: 80px;
+				text-align: center;
+			}
+		
+
+		* {
+		  box-sizing: border-box;
+		}
+		
+		#more {display: none;}
+
+		/* Create three equal columns that floats next to each other */
+		.column-topbar {
+			float: left;
+			width: 100%;
+			height: auto;
+			border-bottom:1px solid grey;
+		  	
+		  }
+		  
+		.column-topbar-menu {
+		  float: left;
+		  width: 33%;
+		  height: 59px;
+		  }
+		  
+		.column-navbar {
+			float: left;
+			width: 8.33%;
+			height: auto;
+			text-align: center;
+			object-fit: contain;
+		  	
+		  }  
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		a:link{
+		text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+		
+		.column-navbar:hover {
+			background-color: #88c1ff;
+			height:100%;
+			border-radius: 3px;
+			display: inline-block;
+			
+			
+		}
+		
+		.signup {
+			float: right;
+			border:1px solid grey;
+			border-radius:5px;
+			padding: 5px;
+			width:80px;
+			height:auto;
+			text-align: center;
+		}
+		
+		.featured {
+			margin-top: 5px;
+			width: 100%;
+			height: 340px;
+			background-color: #343a40;
+			border: 1px solid #343a40;
+			border-radius: 5px;
+			opacity :0.7;
+			object-fit: contain;
+			
+		}
+		
+		.featured-box {
+			margin: 50px;
+			margin-top: 10px;
+			width: 500px;
+			float: left;
+			object-fit: contain;
+		}
+		
+		.featured-title {
+			margin: 0px;
+			font-size: 55px;
+			font-weight: strong;
+			color: white;
+			object-fit: contain;
+		}
+		
+		.featured-content {
+			margin-top: 15px;
+			color: white;
+			font-size: 15px;
+			object-fit: contain;
+		}
+		
+		.column-content {
+		  float: left;
+		  margin: 5px 10px;
+		  width: 48%;
+		  height: 100%;
+		  border:1px solid grey;
+		  border-radius: 3px;
+		  object-fit: contain;
+		}
+		
+		.img {
+			margin-top: -17%
+			width: 40%;
+			height: 100%;
+			line-height: 200px;
+		//	line-width: 100%;
+			text-align: center;
+			font-weight: strong;
+			color: white;
+			float: right;
+			display: block;
+			color: #55595c
+		//	object-fit: contain;
+			border: 1px solid grey;
+		}
+		
+		#thumbnail {
+			margin-top: -17%
+			float:right; 
+			width: 35%;
+			height: 220px;
+			background-color: #55595c;
+			border-radius: 2px;
+			display: block;
+		}
+		
+		.featured-second {
+			margin-left:0px; 
+			width: 80% 
+			float:left;
+		}
+		
+		p {
+			font-size: 1.3vw;
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+		
+		h1, h2, h3, {
+			font-size: 1vw;
+		}
+		
+		div {
+			width:100%;
+			height: 2/3vh;
+			//background:url('your_image.jpg') no-repeat center center;
+			//background-size:cover;
+			//overflow:hidden;
+		}
+			
+				
+		@media screen and (max-width:1024px) {
+			.header, .body, .sidebar, {
+				width: 100%;
+			}
+		}
+		
+		.navbar {
+			width: 120%;
+			height: auto;
+			float: left;
+		}
+		
+		ul {
+			width: 110%;
+		}
+		
+		li {
+			float: left;
+			font-size: 1.7vw;
+			display: inline;
+			margin: 5px;
+			padding-right: 5px;
+		}
+		
+		.post-form {
+			margin: 1px;
+			width: 50%;
+			max-width: 50%
+			height: auto;
+			display: none;
+			
+		}
+		
+		.form-parent {
+			margin: 1px;
+			width: 100%;
+			max-width: 50%
+			height: auto;
+		//	visibility: hidden;
+			border-top: 1px solid grey;
+			
+		}
+			
+		.input {
+			float: right;
+			width: 70%;
+		}
+		
+		
+	
+		</style>
+		
+	</head>
+	<body>
+
+		<div class="container" id="container" style="margin-top: -90px;">
+		
+			<div class="header">
+			
+				<div class="row" style= "overflow:auto">
+				
+					<div class="column-topbar">
+				
+						<div class="column-topbar-menu" >
+							<p><a id="subscribe-button" href="" onclick="subscribe()" >Subscribe</a></p>
+						</div>
+					 
+						<div class="column-topbar-menu" style="text-align:center;" >
+							<p style="margin: 0px; font-size: 40px;"><b>Large</b></p>
+						</div>
+						
+						<div class="column-topbar-menu">
+							<p class="signup"><a href="" onclick= "window.open('form.html', 'Sign-up', 'width=500,height=400' );" >Sign Up</a></p>
+						</div>
+
+					</div>
+				
+				</div>
+				
+				<div class="row" style="margin:5px; ">
+				
+
+
+				  <div class="column-navbar" >
+					<a href=""><p>World</p></a>
+
+				  </div>
+				 
+				 <div class="column-navbar" >
+					<a href=""><p>U.S.</p></a>				
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Technology</p></a>				
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Design</p></a>
+				  </div>
+				 
+				 <div class="column-navbar">
+					<a href=""><p>Culture</p></a>				
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Bussiness</p></a>
+
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Politics</p></a>
+				  </div>
+				 
+				 <div class="column-navbar">
+					<a href=""><p>Opinions</p></a>				
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Science</p></a>				
+
+				  </div>
+				  
+				  <div class="column-navbar" >
+					<a href=""><p>Health</p></a>
+				  </div>
+				 
+				 <div class="column-navbar">
+					<a href=""><p>Style</p></a>				
+				  </div>
+				  
+				  <div class="column-navbar">
+					<a href=""><p>Travel</p></a>				
+
+				  </div>
+				
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<div class="featured" >
+						<div class="featured-box" >
+							<p class="featured-title" style="font-size: 4.5vw;">Title of a longer featured blog post</p>
+							
+							<div id="post" style="width: 100%; height: 120%" >
+								<p class="featured-content" style="font-size: 1.3vw;">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis orci laoreet, auctor quam sit amet, interdum augue. 
+									Duis id mi est. Integer vitae quam congue, sodales mi vitae, molestie eros. Aenean molestie blandit laoreet. Praesent eu tincidunt dolor. 
+									Integer non nibh sodales quam convallis sagittis.<span id="dots">...</span> 
+									
+									<span id="more">
+							 		Quisque ullamcorper dolor id orci consequat, nec luctus erat elementum. In hac habitasse platea dictumst.
+									Aenean auctor interdum quam, at consequat dolor.
+									
+									 
+									Pellentesque mollis augue ac purus bibendum, id pretium justo placerat. 
+									Quisque condimentum massa quis turpis faucibus, vitae bibendum velit commodo. Etiam tempor, urna vitae accumsan consectetur, tortor orci tincidunt libero, 
+									in tincidunt mauris elit quis ipsum. In hac habitasse platea dictumst. Ut risus ex, pellentesque et nisl vitae, lobortis imperdiet neque. Donec finibus aliquet ex sed vestibulum.
+									</span>
+								</p>
+							</div>
+							<a><p style="color: white;" onclick="readMore()" id="myBtn"><b>Continue Reading...</b></p></a>
+						
+						</div>
+					</div>
+					
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<div class="column-content">
+						<img id="thumbnail" class="img" src="" alt="Thumbnail" style="clear: right;">
+						
+							<div style="margin-left:20px; width: 60% float:left; ">	
+								
+								<p><h3 style="color: blue;">World</h3></p>
+							
+								<div id="featured-world" class="featured-second">
+							
+								</div>
+							
+								<p style="color: blue;" onclick="readMore()" id="myBtn">Continue Reading...</p>
+							
+							</div>
+							
+						
+						
+					</div>
+					
+					<div class="column-content"                              >
+					
+						<img id="thumbnail" class="img" src="" alt="Thumbnail" style="clear: right;">
+						
+						<div style="margin-left:20px; width: 60% float:left;">	
+							
+							<p><h3 style="color: green;">Design</h3></p>							
+							<div id="featured-design" class="featured-second" style="height: 90%">
+							
+							</div>
+							<p style="color: blue; " onclick="readMore()" id="myBtn">Continue Reading...</p>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<div class="container-main">
+			
+				<div class="row">
+				
+					<div class="body ">
+					
+						<div class="column-topbar" style="  width: 105%" >
+							<p><h2 style="font-style: italic; float: left">From the Firehose</h2></p>
+							<button class= "signup" style= "font-weight: bold; float: right;margin: 25px; width: 20%" onclick= "guestPost()" value= "guest-post">Guest Post</button>
+							<br><br><br><br>
+						<div class="form-parent">
+							<form id= "post-form" name= "postform" class= "post-form" style= "border: 0px solid #ccc; border-radius: 5px;" >
+								<h1>New Post</h1>		
+								<p>Name :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Name" name= "fname"></p>
+								<p>Contact :<span>   </span><input class= "input" type= "tel" pattern= "[0-9]{10}" name= "contact" placeholder= "Contact" ></p>	
+								<p>Email Id :<span>   </span><input class= "input" type= "email" name= "email" placeholder= "Enter Email" value= ""></p>			
+								<br>			
+								<p>Title :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Your Title" name= "title"></p>
+								<p>Category :<span>   
+										</span> 
+										<select class= "input" id= "category"  name= "category" >
+											<option value= ""></option>
+											<option value= "World">World</option>
+											<option value= "US">U.S.</option>
+											<option value= "Technology">Tecnology</option>
+											<option value= "Design">Design</option>
+											<option value= "Culture">Culture</option>
+											<option value= "Business">Business</option>
+											<option value= "Politics">Politics</option>
+											<option value= "Opinions">Opinions</option>
+											<option value= "Science">Science</option>
+											<option value= "Health">Health</option>
+											<option value= "Style">Style</option>
+											<option value= "Travel">Travel</option>
+										</select >
+									</p>			
+									<p>Content :<span>   </span><textarea class= "input" name= "content" style=" height: 20%;" value= "" ></textarea></p>
+									<br><br><br><br><br><br>
+									<input type= "submit" id= "signup" onclick= "myBlogPost()" value= "Post" >		
+								</form>
+							</div>
+							
+							<div id="blog-post" >
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				
+				
+					<div class="sidebar">
+				
+						<div class="row">
+					
+							<div style="width: 88%; float: right; ">
+						
+								<div style=" width: 94%; background-color: #f7f9fb; margin-right: 0px; border-radius: 3px; padding: 15px; ">
+								
+									<div style="margin-left:20px; margin-top: -15px; width: 94%; padding: 10px;">
+										<p><h2><i>About</i></h2></p>
+										<p style=" margin-top: -10px;">Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.
+										Aenean lacinia bibendum nulla sed consectetur.</p>
+									</div>
+								
+								</div>
+							
+								<br>
+								<br>
+							
+								<div class="" style="padding: 10px;" >
+							
+									<div id="archives" style="margin-left:20px; width: 80%; height: 250px; ">
+										<p><h3 style="padding-bottom: 1px; font-size: 24px; font-weight: strong; margin-bottom: 0px;  ">Archives</h3></p>
+										<br>
+										<p><a href="" style="color: blue;">March 2019</a></p>
+										<p><a href="" style="color: blue;">February 2019</a></p>
+										<p><a href="" style="color: blue;">January 2019</a></p>
+										<p><a href="" style="color: blue;">December 2018</a></p>
+										<p><a href="" style="color: blue;">November 2018</a></p>
+										<p><a href="" style="color: blue;">October 2018</a></p>
+										<p><a href="" style="color: blue;">September 2018</a></p>
+										<p><a href="" style="color: blue;">August 2018</a></p>
+										<p><a href="" style="color: blue;">July 2018</a></p>
+										<p><a href="" style="color: blue;">June 2018</a></p>
+										<p><a href="" style="color: blue;">May 2018</a></p>
+										<p><a href="" style="color: blue;">April 2018</a></p>
+									
+									</div>
+								
+									<br>
+									<br>
+									<br>
+									<br>
+									<div style="margin-left:20px; width: 80%; height: 250px; ">
+									<p><h3 style="font-size: 24px; font-weight: strong; ">Elsewhere</h3></p>
+									<p ><a href="" style="color: blue;">Github</a></p>
+									<p><a href="" style="color: blue;">Twitter</a></p>
+									<p><a href="" style="color: blue;">Facebook</a></p>
+									
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						
+						
+					</div>
+					
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			
+			<div style="margin-top: 10px; padding: 25px;">
+				<p>Blog Template</p>
+			</div>
+			
+		</div>
+		
+		
+		<script type="text/javascript">
+		
+			function readMore() {
+			//	alert("test");
+			  var dots = document.getElementById("dots");
+			  var moreText = document.getElementById("more");
+			  var btnText = document.getElementById("myBtn");
+			
+
+			  if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "<b>Continue Reading...</b>"; 
+				moreText.style.display = "none";
+				document.getElementById("post").style.width = "100%";
+				} else {
+				dots.style.display = "none";
+				btnText.innerHTML = "<b>Read less</b>"; 
+				moreText.style.display = "inline";
+				document.getElementById("post").style.width = "179%";
+			  }
+			}
+			
+		/*	
+          
+         window.addEventListener("resize", function() {
+			   document.getElementByID("container").innerHTML = function () {
+				 var container = document.getElementByClass("container");
+				 var width = "1200px";
+					
+					if (width < "1200px"){
+						container.style.width = "1024px";
+					} else if (width < "550px") {
+						container.style.width = "400px";
+					} else {
+						container.style.width = "100%";					
+					}
+				}
+			});
+		*/
+			
+			//function guestPost(){
+			//	window.open("BlogPost.html", "BlogPost", "width=580,height=500", "false");
+			//var blog_post_area = document.getElementsByClassName("form-parent");
+			//blog_post_area.style.display;
+			//document.getElementsByClassName("form-parent").style.display= "block";
+			//}
+			
+			function subscribe() {
+				document.getElementById("subscribe-button").innerHTML = "Unsubscribe";
+				alert ('Thank you for Subscribing');
+				return false;
+			}
+			
+			function guestPost() {
+				var myform = document.getElementsByClassName("post-form")
+				var formShow = function () { myform[0].style.display = "inline";}
+				
+				if (myform[0].style.display = "none"){
+					//window.open("", "", "width=550,height=580",false).innerHTML = myform[0];
+					myform[0].style.display = "inline";
+					//document.getElementsByClassName("form-parent").style.display= "block";
+					//document.getElementsByClassName("form-parent").style.visibility= "visible";
+					
+				}else{
+					myform[0].style.display = "none";
+					//document.getElementsByClassName("form-parent").style.display= "none";
+				}
+			}
+			
+			function myBlogPost() {
+				//document.getElementById("show").innerHtml = "test";
+				
+				var name = document.getElementById("name").value;
+				var contacts = document.getElementById("contact").value;
+				var email = document.getElementById("email");
+				var namevalid = document.forms["postform"]["fname"].value;
+				var contactvalid = document.forms["postform"]["contact"].value;
+				var emailvalid = document.forms["postform"]["email"].value;
+				var title = document.forms["postform"]["title"].value;
+				var category = document.forms["postform"]["category"].value;
+				var postContent = document.forms["postform"]["content"].value;
+				
+				if (namevalid == ""){
+					window.alert("Please Enter Name to Proceed!");
+					return false;
+				} else if (contactvalid == "") {
+					alert("Please Enter Contact no. to Proceed!");
+					return false;
+				} else if (emailvalid == "") {
+					alert("Please Enter Email Id to Proceed!");
+					return false;
+				} else if (title == "") {
+					alert("Please Enter Title to Proceed!");
+					return false;
+				} else if (category == "") {
+					alert("Please Select Category to Proceed!");
+					return false;
+				} else if (postContent == "") {
+					alert("Please Enter Your Post to Proceed!");
+					return false;
+				} else {
+					/*name.value = function() {
+						document.write("").namevalid;
+					} ;
+					//document.getElementById("post").document.write("<br>");
+					//document.getElementById("post").document.write("hello test");
+					*/
+					alert("Hi " + name + ". Your post was succsessfully updated.!!!!");
+					return false;
+				}				
+			}
+			
+			
+		
+		</script>
+	</body>
+
+</html>
