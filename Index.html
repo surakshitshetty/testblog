@@ -253,7 +253,7 @@
 		
 		.post-form {
 			margin: 1px;
-			width: 50%;
+			width: 98%;
 			max-width: 50%
 			height: auto;
 			display: none;
@@ -277,7 +277,12 @@
 		
 		
 	
-		</style>
+		
+@media (min-width:400px){
+#userPost {
+}
+}
+        </style>
 		
 	</head>
 	<body>
@@ -445,45 +450,54 @@
 						<div class="column-topbar" style="  width: 105%" >
 							<p><h2 style="font-style: italic; float: left">From the Firehose</h2></p>
 							<button class= "signup" style= "font-weight: bold; float: right;margin: 25px; width: 20%" onclick= "guestPost()" value= "guest-post">Guest Post</button>
+							
 							<br><br><br><br>
-						<div class="form-parent">
-							<form id= "post-form" name= "postform" class= "post-form" style= "border: 0px solid #ccc; border-radius: 5px;" >
-								<h1>New Post</h1>		
-								<p>Name :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Name" name= "fname"></p>
-								<p>Contact :<span>   </span><input class= "input" type= "tel" pattern= "[0-9]{10}" name= "contact" placeholder= "Contact" ></p>	
-								<p>Email Id :<span>   </span><input class= "input" type= "email" name= "email" placeholder= "Enter Email" value= ""></p>			
-								<br>			
-								<p>Title :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Your Title" name= "title"></p>
-								<p>Category :<span>   
-										</span> 
-										<select class= "input" id= "category"  name= "category" >
-											<option value= ""></option>
-											<option value= "World">World</option>
-											<option value= "US">U.S.</option>
-											<option value= "Technology">Tecnology</option>
-											<option value= "Design">Design</option>
-											<option value= "Culture">Culture</option>
-											<option value= "Business">Business</option>
-											<option value= "Politics">Politics</option>
-											<option value= "Opinions">Opinions</option>
-											<option value= "Science">Science</option>
-											<option value= "Health">Health</option>
-											<option value= "Style">Style</option>
-											<option value= "Travel">Travel</option>
-										</select >
-									</p>			
-									<p>Content :<span>   </span><textarea class= "input" name= "content" style=" height: 20%;" value= "" ></textarea></p>
-									<br><br><br><br><br><br>
-									<input type= "submit" id= "signup" onclick= "myBlogPost()" value= "Post" >		
-								</form>
-							</div>
+							<div class="form-parent">
 							
-							<div id="blog-post" >
+								<div id="form" class= "post-form" style= "float: left; margin: 5px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+								<!--<form id= "post-form" name= "postform" class= "post-form" style= "padding: 10px;"  > -->
+										<h1>New Post</h1>		
+										<p>Name :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Name" name= "fname"></p>
+										<p>Email Id :<span>   </span><input class= "input" type= "email" name= "email" placeholder= "Enter Email" value= ""></p>			
+										<br>			
+										<p>Title :<span>   </span><input class= "input" type= "text" id= "title" placeholder= "Enter Your Title" name= "title"></p>
+										<p>Category :<span>   
+												</span> 
+												<select class= "input" id= "category"  name= "category" >
+													<option value= ""></option>
+													<option value= "World">World</option>
+													<option value= "US">U.S.</option>
+													<option value= "Technology">Tecnology</option>
+													<option value= "Design">Design</option>
+													<option value= "Culture">Culture</option>
+													<option value= "Business">Business</option>
+													<option value= "Politics">Politics</option>
+													<option value= "Opinions">Opinions</option>
+													<option value= "Science">Science</option>
+													<option value= "Health">Health</option>
+													<option value= "Style">Style</option>
+													<option value= "Travel">Travel</option>
+												</select >
+											</p>			
+											<p>Content :<span>   </span><textarea name= "content" class= "input" id="userPost" rows= "10" cols= "59" value= "" ></textarea></p>
+											<br><br><br><br><br><br>
+											<button type= "submit" id= "signup" onclick= "myBlogPost()" value= "Post" > Post</button>
+											
+											
+													
+									<!--</form>  -->
+									</div>	
+									
+							</div>
 								
-							</div>
-							
 						</div>
 						
+						<div id="myPost" style="width: 100%; border-top: 1px; border-radius: 2px;" >
+							<p><span></span></p>
+							
+						</div>
+					
+					
 					</div>
 					
 				
@@ -564,7 +578,8 @@
 		</div>
 		
 		
-		<script type="text/javascript">
+		<script type="text/javascript" name= "readMoreFunction" >
+
 		
 			function readMore() {
 			//	alert("test");
@@ -586,99 +601,70 @@
 			  }
 			}
 			
-		/*	
-          
-         window.addEventListener("resize", function() {
-			   document.getElementByID("container").innerHTML = function () {
-				 var container = document.getElementByClass("container");
-				 var width = "1200px";
-					
-					if (width < "1200px"){
-						container.style.width = "1024px";
-					} else if (width < "550px") {
-						container.style.width = "400px";
-					} else {
-						container.style.width = "100%";					
-					}
-				}
-			});
-		*/
-			
-			//function guestPost(){
-			//	window.open("BlogPost.html", "BlogPost", "width=580,height=500", "false");
-			//var blog_post_area = document.getElementsByClassName("form-parent");
-			//blog_post_area.style.display;
-			//document.getElementsByClassName("form-parent").style.display= "block";
-			//}
-			
 			function subscribe() {
 				document.getElementById("subscribe-button").innerHTML = "Unsubscribe";
 				alert ('Thank you for Subscribing');
 				return false;
 			}
 			
+			function myBlogPost() { 
+											
+				var para = document.createElement("T");
+				var para2 = document.createElement("D");
+				var para3 = document.createElement("p");
+				var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+				var d = new Date();
+				var date = months[d.getMonth()] +"<span>    </span>" + d.getDate() + ", " + d.getFullYear() + " by " ;
+				var pname = document.getElementById("name").value;
+				var T = document.getElementById("title").value;
+				var cat = document.getElementById("category").value;
+				var post = document.getElementById("userPost").value;
+												
+				if (pname == ""){
+					window.alert("Please Enter Name to Proceed!");
+					return false;
+				} else if (T == "") {
+					window.alert("Please Enter Title to Proceed!");
+					return false;
+				} else if (cat == "") {
+					window.alert("Please Select Category to Proceed!");
+					return false;
+				} else if (post == "") {
+					window.alert("Please Enter your post to Proceed!");
+					return false;
+				} else {
+										
+					para.innerHTML = "<h2>" + T; + "</h2>";
+					para2.innerHTML = "<b>" + cat + "</b>"  + ", " + date + "<b>" + pname + "</b>" ;
+					para3.innerHTML = "<p style='text-align: justify; height:auto; overflow: auto;'>" + post + "</p>";
+					
+					document.getElementById("myPost").appendChild(para);
+					document.getElementById("myPost").appendChild(para2);
+					document.getElementById("myPost").appendChild(para3);
+					alert("Hi" + name + ". Your Post has been Successfully uploaded!!!");
+				}
+			}
+			
 			function guestPost() {
 				var myform = document.getElementsByClassName("post-form")
 				var formShow = function () { myform[0].style.display = "inline";}
-				
-				if (myform[0].style.display = "none"){
+									
+				if (myform[0].style.display === "none"){
 					//window.open("", "", "width=550,height=580",false).innerHTML = myform[0];
-					myform[0].style.display = "inline";
+					myform[0].style.display = "block";
 					//document.getElementsByClassName("form-parent").style.display= "block";
 					//document.getElementsByClassName("form-parent").style.visibility= "visible";
-					
+			
 				}else{
 					myform[0].style.display = "none";
 					//document.getElementsByClassName("form-parent").style.display= "none";
 				}
 			}
-			
-			function myBlogPost() {
-				//document.getElementById("show").innerHtml = "test";
-				
-				var name = document.getElementById("name").value;
-				var contacts = document.getElementById("contact").value;
-				var email = document.getElementById("email");
-				var namevalid = document.forms["postform"]["fname"].value;
-				var contactvalid = document.forms["postform"]["contact"].value;
-				var emailvalid = document.forms["postform"]["email"].value;
-				var title = document.forms["postform"]["title"].value;
-				var category = document.forms["postform"]["category"].value;
-				var postContent = document.forms["postform"]["content"].value;
-				
-				if (namevalid == ""){
-					window.alert("Please Enter Name to Proceed!");
-					return false;
-				} else if (contactvalid == "") {
-					alert("Please Enter Contact no. to Proceed!");
-					return false;
-				} else if (emailvalid == "") {
-					alert("Please Enter Email Id to Proceed!");
-					return false;
-				} else if (title == "") {
-					alert("Please Enter Title to Proceed!");
-					return false;
-				} else if (category == "") {
-					alert("Please Select Category to Proceed!");
-					return false;
-				} else if (postContent == "") {
-					alert("Please Enter Your Post to Proceed!");
-					return false;
-				} else {
-					/*name.value = function() {
-						document.write("").namevalid;
-					} ;
-					//document.getElementById("post").document.write("<br>");
-					//document.getElementById("post").document.write("hello test");
-					*/
-					alert("Hi " + name + ". Your post was succsessfully updated.!!!!");
-					return false;
-				}				
-			}
-			
-			
 		
+	
 		</script>
-	</body>
+
+		
+		</body>
 
 </html>
