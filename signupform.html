@@ -1,0 +1,98 @@
+<html>
+
+	<head>
+		
+		<style>
+			
+			.signup-form {
+				margin: 1px;
+				width: 400px;
+				max-width: 50%
+				height: auto;
+				//display: none;
+				
+			}
+			
+			.input {
+				float: right;
+			}
+		
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<form id= "signup-form" name= "signup" class= "signup-form" >
+			<h1>Signup Form</h1>
+		
+			<p>Name :<span>   </span><input class= "input" type= "text" id= "name" placeholder= "Enter Name" name= "fname"></p>
+
+			<p>Contact :<span>   </span><input class= "input" type= "text" name= "contact" placeholder= "Contact" name= ""></p>
+	
+			<p>Email Id :<span>   </span><input class= "input" type= "email" name= "email" placeholder= "Enter Email" value= ""></p>
+			
+			<p>Comment :<span>   </span><textarea class= "input" name="message" name= "comment" style="width: 43%; height:auto;" value= "" ></textarea></p>
+			
+			<input type= "submit" id= "signup" onclick= "mySignup()" >
+		
+		
+		</form>
+		<br>
+		
+		
+		<script type= "text/javascript">
+			
+			
+			function mySignup() {
+				
+				var name = document.getElementById("name");
+				var contacts = document.getElementById("contact");
+				var email = document.getElementById("email");
+				var namevalid = document.forms["signup"]["fname"].value;
+				var contactvalid = document.forms["signup"]["contact"].value;
+				var emailvalid = document.forms["signup"]["email"].value;
+				
+				if (namevalid == ""){
+					alert("Please Enter Name to Proceed!");
+					return false;
+				}else if (contactvalid == "") {
+					alert("Please Enter Contact no. to Proceed!");
+					return false;
+				}else if (emailvalid == "") {
+					alert("Please Enter Email Id to Proceed!");
+					return false;
+				}else{
+				
+					alert("Hi " + name.value + ". Thanks for Signing up!!!!");
+				}
+			}
+			
+			
+			function forms() {
+				var myform = document.getElementByClassName("signup-form")
+				var window = window.open("", "Signup","width=550,height=580"  );
+				
+				window.document.open();
+				window.document.write(myform);
+				window.document.close();
+				if (myform[0].style.display === "none"){
+				myform[0].style.display = "block";
+				}else{
+				myform[0].style.display = "none";
+				
+				}
+							
+			
+				
+				
+							
+			}
+			
+			
+		</script>
+		
+		
+	</body>
+
+</html>
